@@ -1,0 +1,55 @@
+import { Story, Preview, Meta, Props, html } from '@open-wc/demoing-storybook';
+
+import '../menu-component.js';
+
+<Meta 
+  title="MenuComponent"
+  parameters={{
+    component: "menu-component",
+    options: { selectedPanel: "storybookjs/knobs/panel" }
+  }}
+/>
+
+# MenuComponent
+
+A component for...
+
+## Features:
+
+- a
+- b
+- ...
+
+## How to use
+
+### Installation
+
+```bash
+yarn add menu-component
+```
+
+```js
+import 'menu-component/menu-component.js';
+```
+
+<Preview withToolbar>
+  <Story name="Simple">
+    {html`
+      <menu-component></menu-component>
+    `}
+  </Story>
+</Preview>
+
+## API
+
+<Props of="menu-component" />
+
+## Variations
+
+###### Custom Title
+
+<Story name="Custom Title">
+  {html`
+    <menu-component .title=${'Hello World'}></menu-component>
+  `}
+</Story>

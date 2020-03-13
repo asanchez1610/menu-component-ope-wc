@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en-GB">
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Demo: Menu-component</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <style>
+    body {
+      background: #fafafa;
+      margin: 0px;
+      padding: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="demo"></div>
+
+  <script type="module">
+    import { html, render } from 'lit-html';
+    import '../menu-component.js';
+    const options = [
+      {
+        name: 'Opcion 1',
+        page: 'op1'
+      },
+      {
+        name: 'Opcion 2',
+        page: 'op2'
+      },
+      {
+        name: 'Opcion 3',
+        page: 'op3'
+      }
+    ];
+    render(
+      html`
+        <menu-component .options = ${options} ></menu-component>
+      `,
+      document.querySelector('#demo')
+    );
+
+
+
+  </script>
+
+</body>
+
+</html>
